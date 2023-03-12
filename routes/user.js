@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 				if (users.length) {
 					res.status(200).json(users);
 				} else {
-					res.status(200).json('No users found');
+					res.status(404).json('No users found');
 				}
 			})
 			.catch((err) => {
